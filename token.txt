@@ -1,0 +1,3 @@
+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
+https://git@github.com:Nazarkulova/Terraform.git@github.com/Nazarkulova/Terraform.git
+

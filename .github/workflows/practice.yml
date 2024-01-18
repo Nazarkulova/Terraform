@@ -1,0 +1,28 @@
+name: Copy File Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  copyFile:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Create Directories and File
+      run: |
+        mkdir -p destination
+        mkdir -p source_folder
+        touch source_folder/practice_file.txt
+
+    - name: Copy File to Another Folder
+      run: |
+        cp source_folder/practice_file.txt destination/
+
+    - name: Display Copied Files
+      run: |
+        ls -R
